@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Star, Heart, Share2, ShoppingCart, Zap, MessageCircle, Truck, RotateCcw, ChevronRight, MapPin, User, ThumbsUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -13,6 +12,7 @@ import { DualShoppingView } from '@/components/DualShoppingView';
 
 const ProductDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [selectedSize, setSelectedSize] = useState('M');
   const [quantity, setQuantity] = useState(1);
   const [isWishlisted, setIsWishlisted] = useState(false);
@@ -38,7 +38,12 @@ const ProductDetails = () => {
     fabric: "100% Cotton with Rayon lining",
     care: "Machine wash cold, hang dry",
     features: ["V-neckline", "Adjustable straps", "Side pockets", "Midi length"],
-    deliveryDays: "2-3 days"
+    deliveryDays: "2-3 days",
+    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800&h=1000&fit=crop"
+  };
+
+  const handleBuyNow = () => {
+    navigate('/delivery-address', { state: { product } });
   };
 
   return (
@@ -163,7 +168,10 @@ const ProductDetails = () => {
                 <ShoppingCart className="h-5 w-5 mr-2" />
                 Add to Cart
               </Button>
-              <Button className="w-full bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white py-3 text-lg font-semibold rounded-full">
+              <Button 
+                className="w-full bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white py-3 text-lg font-semibold rounded-full"
+                onClick={handleBuyNow}
+              >
                 <Zap className="h-5 w-5 mr-2" />
                 Buy Now
               </Button>
