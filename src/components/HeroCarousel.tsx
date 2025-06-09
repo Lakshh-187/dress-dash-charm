@@ -7,34 +7,34 @@ import { Sparkles, ShoppingBag, Heart } from 'lucide-react';
 const HeroCarousel = () => {
   const slides = [
     {
-      title: "Swiss Beauty",
-      subtitle: "CRAZE",
-      offer: "UP TO 35% OFF",
-      extraOffer: "+Extra 5% Off on Prepaid Offer",
-      bgGradient: "from-yellow-400 via-pink-400 to-purple-500",
-      image: "https://images.unsplash.com/photo-1594736797933-d0c501ba2fe6?w=600&h=400&fit=crop",
-      products: ["💄", "✨", "💅"],
-      ctaText: "Shop Beauty"
+      title: "Exquisite",
+      subtitle: "JEWELRY",
+      offer: "UP TO 40% OFF",
+      extraOffer: "+Extra 10% Off on Gold Jewelry",
+      bgGradient: "from-amber-400 via-orange-400 to-yellow-500",
+      image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600&h=400&fit=crop",
+      products: ["💍", "✨", "💎"],
+      ctaText: "Shop Jewelry"
     },
     {
-      title: "Festival",
+      title: "Bridal",
       subtitle: "COLLECTION",
       offer: "UP TO 50% OFF",
-      extraOffer: "Free Delivery on Orders Above ₹999",
-      bgGradient: "from-orange-400 via-red-400 to-pink-500",
-      image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?w=600&h=400&fit=crop",
-      products: ["🪷", "✨", "👗"],
-      ctaText: "Shop Traditional"
+      extraOffer: "Free Delivery on Orders Above ₹5,999",
+      bgGradient: "from-rose-400 via-amber-400 to-orange-500",
+      image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=600&h=400&fit=crop",
+      products: ["👰", "✨", "💒"],
+      ctaText: "Shop Bridal"
     },
     {
-      title: "Western",
-      subtitle: "VIBES",
-      offer: "UP TO 40% OFF",
+      title: "Diamond",
+      subtitle: "ELEGANCE",
+      offer: "UP TO 60% OFF",
       extraOffer: "Buy 2 Get 1 Free on Selected Items",
-      bgGradient: "from-blue-400 via-purple-400 to-pink-500",
-      image: "https://images.unsplash.com/photo-1566479179817-19eede5a1468?w=600&h=400&fit=crop",
-      products: ["👗", "👠", "💍"],
-      ctaText: "Shop Western"
+      bgGradient: "from-blue-400 via-amber-400 to-orange-500",
+      image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=600&h=400&fit=crop",
+      products: ["💎", "👑", "✨"],
+      ctaText: "Shop Diamonds"
     }
   ];
 
@@ -69,13 +69,13 @@ const HeroCarousel = () => {
                           {slide.offer}
                           <span className="text-lg ml-2">*</span>
                         </div>
-                        <div className="bg-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block">
+                        <div className="bg-amber-700 text-white px-4 py-2 rounded-full text-sm font-semibold inline-block">
                           {slide.extraOffer}
                         </div>
                       </div>
                       
                       <div className="flex space-x-4">
-                        <Button className="bg-white text-purple-600 hover:bg-gray-100 rounded-full px-8 py-3 font-bold">
+                        <Button className="bg-white text-amber-700 hover:bg-cream-100 rounded-full px-8 py-3 font-bold">
                           <ShoppingBag className="h-5 w-5 mr-2" />
                           {slide.ctaText}
                         </Button>
@@ -85,7 +85,7 @@ const HeroCarousel = () => {
                         </Button>
                       </div>
                       
-                      <p className="text-sm opacity-80">*on selected products</p>
+                      <p className="text-sm opacity-80">*on selected jewelry pieces</p>
                     </div>
                     
                     {/* Right Image */}
@@ -100,7 +100,7 @@ const HeroCarousel = () => {
                           <Sparkles className="h-8 w-8 text-white animate-spin" />
                         </div>
                         <div className="absolute -bottom-4 -left-4 bg-white/20 backdrop-blur-sm rounded-full p-3">
-                          <div className="text-2xl">✨</div>
+                          <div className="text-2xl">💎</div>
                         </div>
                       </div>
                     </div>

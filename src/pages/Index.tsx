@@ -22,51 +22,51 @@ const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const beautyCategories = [
+  const jewelryCategories = [
     {
       name: "BESTSELLER",
-      image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-pink-200 to-pink-300"
+      image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-amber-200 to-amber-300"
     },
     {
-      name: "LIPS",
-      image: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-red-200 to-red-300"
+      name: "EARRINGS",
+      image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-rose-200 to-rose-300"
     },
     {
-      name: "FACE",
-      image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-orange-200 to-orange-300"
-    },
-    {
-      name: "EYE",
-      image: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-blue-200 to-blue-300"
-    },
-    {
-      name: "NEW LAUNCH",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-purple-200 to-purple-300"
-    },
-    {
-      name: "SKIN CARE",
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-green-200 to-green-300"
-    },
-    {
-      name: "GIFTS & KITS",
-      image: "https://images.unsplash.com/photo-1549062572-544a64fb0c56?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-pink-200 to-purple-300"
-    },
-    {
-      name: "SELECT",
-      image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=100&h=100&fit=crop",
+      name: "NECKLACES",
+      image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=100&h=100&fit=crop",
       bgColor: "bg-gradient-to-br from-yellow-200 to-yellow-300"
     },
     {
-      name: "CRAZE",
-      image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-indigo-200 to-indigo-300"
+      name: "RINGS",
+      image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-orange-200 to-orange-300"
+    },
+    {
+      name: "BRACELETS",
+      image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-amber-200 to-orange-300"
+    },
+    {
+      name: "PENDANTS",
+      image: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-yellow-200 to-amber-300"
+    },
+    {
+      name: "BANGLES",
+      image: "https://images.unsplash.com/photo-1611791485021-a86c1e4b65e5?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-rose-200 to-amber-300"
+    },
+    {
+      name: "CHAINS",
+      image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-orange-200 to-yellow-300"
+    },
+    {
+      name: "SETS",
+      image: "https://images.unsplash.com/photo-1576053139448-8d87b891cd1b?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-amber-200 to-rose-300"
     }
   ];
 
@@ -148,67 +148,67 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
       {/* Main Header */}
-      <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-purple-100">
+      <header className="bg-gradient-to-r from-amber-50 to-orange-50 shadow-lg sticky top-0 z-50 border-b border-amber-200">
         <div className="container mx-auto px-4">
           {/* Top Bar */}
           <div className="flex items-center justify-between py-4">
-            <div className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
-              DressUp ✨
+            <div className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">
+              JewelCraft ✨
             </div>
             
             {/* Search Bar */}
             <div className="flex-1 max-w-md mx-8">
               <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-amber-600 h-5 w-5" />
                 <Input
-                  placeholder="Search for your perfect dress..."
+                  placeholder="Search for exquisite jewelry..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 pr-4 py-2 rounded-full border-purple-200 focus:border-purple-400 focus:ring-purple-400/20"
+                  className="pl-10 pr-4 py-2 rounded-full border-amber-300 focus:border-amber-500 focus:ring-amber-400/20 bg-white/80"
                 />
               </div>
             </div>
 
             <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="sm" className="relative hover:bg-purple-100">
-                <User className="h-5 w-5 text-gray-600" />
+              <Button variant="ghost" size="sm" className="relative hover:bg-amber-100">
+                <User className="h-5 w-5 text-amber-700" />
               </Button>
-              <Button variant="ghost" size="sm" className="relative hover:bg-purple-100">
-                <Heart className="h-5 w-5 text-gray-600" />
-                <span className="absolute -top-1 -right-1 bg-pink-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+              <Button variant="ghost" size="sm" className="relative hover:bg-amber-100">
+                <Heart className="h-5 w-5 text-amber-700" />
+                <span className="absolute -top-1 -right-1 bg-rose-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
               </Button>
-              <Button variant="ghost" size="sm" className="relative hover:bg-purple-100">
-                <ShoppingCart className="h-5 w-5 text-gray-600" />
-                <span className="absolute -top-1 -right-1 bg-purple-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+              <Button variant="ghost" size="sm" className="relative hover:bg-amber-100">
+                <ShoppingCart className="h-5 w-5 text-amber-700" />
+                <span className="absolute -top-1 -right-1 bg-amber-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
               </Button>
             </div>
           </div>
 
           {/* Navigation Menu */}
-          <div className="border-t border-gray-100 py-2">
+          <div className="border-t border-amber-200 py-2">
             <NavigationMenu className="mx-auto">
               <NavigationMenuList className="space-x-8">
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
-                    FACE
+                  <NavigationMenuTrigger className="text-sm font-medium text-amber-800 hover:text-amber-600">
+                    EARRINGS
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="p-4 w-80">
                       <div className="grid grid-cols-2 gap-4">
                         <div>
-                          <h4 className="font-semibold mb-2">Foundation</h4>
+                          <h4 className="font-semibold mb-2 text-amber-800">Studs</h4>
                           <ul className="space-y-1 text-sm">
-                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Liquid Foundation</NavigationMenuLink></li>
-                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Powder Foundation</NavigationMenuLink></li>
+                            <li><NavigationMenuLink href="#" className="text-amber-700 hover:text-amber-600">Diamond Studs</NavigationMenuLink></li>
+                            <li><NavigationMenuLink href="#" className="text-amber-700 hover:text-amber-600">Pearl Studs</NavigationMenuLink></li>
                           </ul>
                         </div>
                         <div>
-                          <h4 className="font-semibold mb-2">Concealer</h4>
+                          <h4 className="font-semibold mb-2 text-amber-800">Drops</h4>
                           <ul className="space-y-1 text-sm">
-                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Liquid Concealer</NavigationMenuLink></li>
-                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Stick Concealer</NavigationMenuLink></li>
+                            <li><NavigationMenuLink href="#" className="text-amber-700 hover:text-amber-600">Chandelier</NavigationMenuLink></li>
+                            <li><NavigationMenuLink href="#" className="text-amber-700 hover:text-amber-600">Jhumkas</NavigationMenuLink></li>
                           </ul>
                         </div>
                       </div>
@@ -217,24 +217,24 @@ const Index = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
-                    EYE
+                  <NavigationMenuTrigger className="text-sm font-medium text-amber-800 hover:text-amber-600">
+                    NECKLACES
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="p-4 w-80">
                       <div className="grid grid-cols-2 gap-4">
                         <div>
-                          <h4 className="font-semibold mb-2">Eyeshadow</h4>
+                          <h4 className="font-semibold mb-2 text-amber-800">Chains</h4>
                           <ul className="space-y-1 text-sm">
-                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Palettes</NavigationMenuLink></li>
-                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Singles</NavigationMenuLink></li>
+                            <li><NavigationMenuLink href="#" className="text-amber-700 hover:text-amber-600">Gold Chains</NavigationMenuLink></li>
+                            <li><NavigationMenuLink href="#" className="text-amber-700 hover:text-amber-600">Pearl Strings</NavigationMenuLink></li>
                           </ul>
                         </div>
                         <div>
-                          <h4 className="font-semibold mb-2">Eyeliner</h4>
+                          <h4 className="font-semibold mb-2 text-amber-800">Chokers</h4>
                           <ul className="space-y-1 text-sm">
-                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Liquid Eyeliner</NavigationMenuLink></li>
-                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Pencil Eyeliner</NavigationMenuLink></li>
+                            <li><NavigationMenuLink href="#" className="text-amber-700 hover:text-amber-600">Traditional</NavigationMenuLink></li>
+                            <li><NavigationMenuLink href="#" className="text-amber-700 hover:text-amber-600">Modern</NavigationMenuLink></li>
                           </ul>
                         </div>
                       </div>
@@ -243,49 +243,49 @@ const Index = () => {
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
-                    LIPS
+                  <NavigationMenuTrigger className="text-sm font-medium text-amber-800 hover:text-amber-600">
+                    RINGS
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
-                    NAIL
+                  <NavigationMenuTrigger className="text-sm font-medium text-amber-800 hover:text-amber-600">
+                    BRACELETS
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
-                    BRUSHES & TOOLS
+                  <NavigationMenuTrigger className="text-sm font-medium text-amber-800 hover:text-amber-600">
+                    BANGLES
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
+                  <NavigationMenuTrigger className="text-sm font-medium text-amber-800 hover:text-amber-600">
                     NEW ARRIVALS
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
-                    BRIDAL BUNDLE
+                  <NavigationMenuTrigger className="text-sm font-medium text-amber-800 hover:text-amber-600">
+                    BRIDAL COLLECTION
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
 
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
-                    SKIN CARE
+                  <NavigationMenuTrigger className="text-sm font-medium text-amber-800 hover:text-amber-600">
+                    GIFT SETS
                   </NavigationMenuTrigger>
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
           </div>
 
-          {/* Beauty Categories Row */}
-          <div className="bg-black text-white py-4 -mx-4">
+          {/* Jewelry Categories Row */}
+          <div className="bg-gradient-to-r from-amber-800 to-orange-800 text-white py-4 -mx-4">
             <div className="container mx-auto px-4">
               <div className="flex items-center justify-center space-x-6 md:space-x-8 overflow-x-auto scrollbar-hide">
-                {beautyCategories.map((category, index) => (
+                {jewelryCategories.map((category, index) => (
                   <div key={index} className="flex flex-col items-center space-y-2 min-w-[80px] cursor-pointer group">
                     <div className={`w-16 h-16 md:w-20 md:h-20 rounded-full ${category.bgColor} p-1 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                       <img 
@@ -312,8 +312,8 @@ const Index = () => {
       <section className="py-8">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-2xl font-bold text-gray-900">Shop by Style</h2>
-            <Button variant="outline" size="sm" className="rounded-full border-purple-200 text-purple-600 hover:bg-purple-50">
+            <h2 className="text-2xl font-bold text-amber-900">Shop by Category</h2>
+            <Button variant="outline" size="sm" className="rounded-full border-amber-300 text-amber-700 hover:bg-amber-50">
               <Filter className="h-4 w-4 mr-2" />
               Filter
             </Button>
@@ -327,7 +327,7 @@ const Index = () => {
                 className={`p-4 rounded-2xl transition-all duration-300 transform hover:scale-105 ${
                   selectedCategory === category.name
                     ? `bg-gradient-to-br ${category.color} text-white shadow-lg`
-                    : 'bg-white hover:bg-gray-50 border border-gray-200'
+                    : 'bg-white hover:bg-amber-50 border border-amber-200'
                 }`}
               >
                 <div className="text-2xl mb-2">{category.icon}</div>
@@ -343,12 +343,12 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between mb-8">
             <div className="flex items-center space-x-2">
-              <TrendingUp className="h-6 w-6 text-pink-500" />
-              <h2 className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
+              <TrendingUp className="h-6 w-6 text-amber-600" />
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-amber-700 to-orange-700 bg-clip-text text-transparent">
                 Trending Now 🔥
               </h2>
             </div>
-            <Button variant="link" className="text-purple-600">
+            <Button variant="link" className="text-amber-700">
               View All →
             </Button>
           </div>
@@ -365,10 +365,10 @@ const Index = () => {
                     />
                     <div className="absolute top-3 left-3">
                       <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${
-                        product.tag === 'Trending' ? 'bg-gradient-to-r from-pink-500 to-red-500' :
+                        product.tag === 'Trending' ? 'bg-gradient-to-r from-amber-500 to-orange-500' :
                         product.tag === 'Bestseller' ? 'bg-gradient-to-r from-green-500 to-emerald-500' :
                         product.tag === 'New' ? 'bg-gradient-to-r from-blue-500 to-purple-500' :
-                        'bg-gradient-to-r from-purple-500 to-pink-500'
+                        'bg-gradient-to-r from-amber-600 to-orange-600'
                       }`}>
                         {product.tag}
                       </span>
@@ -378,7 +378,7 @@ const Index = () => {
                       size="sm" 
                       className="absolute top-3 right-3 bg-white/80 hover:bg-white rounded-full p-2"
                     >
-                      <Heart className="h-4 w-4 text-gray-600 hover:text-pink-500" />
+                      <Heart className="h-4 w-4 text-amber-700 hover:text-rose-500" />
                     </Button>
                     
                     {/* Color Options */}
@@ -394,17 +394,17 @@ const Index = () => {
                   </div>
                   
                   <CardContent className="p-4">
-                    <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                    <h3 className="font-semibold text-amber-900 mb-2 group-hover:text-amber-700 transition-colors">
                       {product.name}
                     </h3>
                     <div className="flex items-center space-x-1 mb-2">
                       <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                       <span className="text-sm font-medium">{product.rating}</span>
-                      <span className="text-sm text-gray-500">({product.reviews})</span>
+                      <span className="text-sm text-amber-600">({product.reviews})</span>
                     </div>
                     <div className="flex items-center space-x-2">
-                      <span className="text-lg font-bold text-purple-600">{product.price}</span>
-                      <span className="text-sm text-gray-400 line-through">{product.originalPrice}</span>
+                      <span className="text-lg font-bold text-amber-700">{product.price}</span>
+                      <span className="text-sm text-amber-500 line-through">{product.originalPrice}</span>
                     </div>
                   </CardContent>
                 </Card>
@@ -421,18 +421,18 @@ const Index = () => {
       <InstaGlamSection />
 
       {/* Collections */}
-      <section className="py-12 bg-white/50">
+      <section className="py-12 bg-gradient-to-br from-amber-50 to-orange-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center space-x-2 mb-4">
-              <Sparkles className="h-6 w-6 text-purple-500" />
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <Sparkles className="h-6 w-6 text-amber-600" />
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-amber-700 to-orange-700 bg-clip-text text-transparent">
                 Curated Collections
               </h2>
-              <Sparkles className="h-6 w-6 text-pink-500" />
+              <Sparkles className="h-6 w-6 text-orange-600" />
             </div>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Handpicked styles for every mood, occasion, and vibe ✨
+            <p className="text-amber-700 max-w-2xl mx-auto">
+              Handpicked jewelry for every mood, occasion, and celebration ✨
             </p>
           </div>
 
@@ -465,30 +465,30 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center space-x-2 mb-4">
-              <Crown className="h-6 w-6 text-pink-500" />
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-pink-600 to-orange-600 bg-clip-text text-transparent">
-                You'll Also Love This 💅
+              <Crown className="h-6 w-6 text-amber-600" />
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-amber-700 to-orange-700 bg-clip-text text-transparent">
+                You'll Also Love This 💎
               </h2>
             </div>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Complete your look with these must-have accessories and beauty essentials!
+            <p className="text-amber-700 max-w-2xl mx-auto">
+              Complete your look with these must-have jewelry accessories!
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { name: "Rose Gold Earrings", price: "₹899", image: "💍", category: "Jewelry" },
-              { name: "Matte Lipstick", price: "₹499", image: "💄", category: "Beauty" },
-              { name: "Designer Handbag", price: "₹1,299", image: "👜", category: "Bags" },
-              { name: "Block Heels", price: "₹1,599", image: "👠", category: "Footwear" }
+              { name: "Rose Gold Earrings", price: "₹899", image: "💍", category: "Earrings" },
+              { name: "Diamond Pendant", price: "₹2,499", image: "💎", category: "Pendants" },
+              { name: "Gold Bracelet", price: "₹1,299", image: "⌚", category: "Bracelets" },
+              { name: "Pearl Ring", price: "₹1,599", image: "💍", category: "Rings" }
             ].map((item, index) => (
               <Card key={index} className="group hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 bg-white border-0 rounded-xl overflow-hidden">
                 <CardContent className="p-4 text-center">
                   <div className="text-4xl mb-3">{item.image}</div>
-                  <h3 className="font-semibold text-gray-800 mb-1 text-sm">{item.name}</h3>
-                  <p className="text-xs text-gray-500 mb-2">{item.category}</p>
-                  <span className="font-bold text-purple-600">{item.price}</span>
-                  <Button size="sm" className="w-full mt-3 bg-gradient-to-r from-pink-500 to-orange-500 hover:from-pink-600 hover:to-orange-600 text-white rounded-full">
+                  <h3 className="font-semibold text-amber-800 mb-1 text-sm">{item.name}</h3>
+                  <p className="text-xs text-amber-600 mb-2">{item.category}</p>
+                  <span className="font-bold text-amber-700">{item.price}</span>
+                  <Button size="sm" className="w-full mt-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white rounded-full">
                     Quick Add
                   </Button>
                 </CardContent>
@@ -499,13 +499,13 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gradient-to-r from-purple-900 to-pink-900 text-white py-12">
+      <footer className="bg-gradient-to-r from-amber-900 to-orange-900 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <div className="text-2xl font-bold mb-4">DressUp ✨</div>
-              <p className="text-purple-200 mb-4">
-                Your one-stop destination for stunning dresses that make you feel absolutely amazing.
+              <div className="text-2xl font-bold mb-4">JewelCraft ✨</div>
+              <p className="text-amber-200 mb-4">
+                Your destination for exquisite jewelry that celebrates every moment of your life.
               </p>
               <div className="flex space-x-4">
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
@@ -516,7 +516,7 @@ const Index = () => {
             
             <div>
               <h3 className="font-semibold mb-4">Quick Links</h3>
-              <ul className="space-y-2 text-purple-200">
+              <ul className="space-y-2 text-amber-200">
                 <li><a href="#" className="hover:text-white transition-colors">New Arrivals</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Best Sellers</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Sale</a></li>
@@ -526,7 +526,7 @@ const Index = () => {
             
             <div>
               <h3 className="font-semibold mb-4">Customer Care</h3>
-              <ul className="space-y-2 text-purple-200">
+              <ul className="space-y-2 text-amber-200">
                 <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Track Order</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Returns</a></li>
@@ -536,21 +536,21 @@ const Index = () => {
             
             <div>
               <h3 className="font-semibold mb-4">Stay Updated</h3>
-              <p className="text-purple-200 mb-4">Get the latest trends & exclusive offers!</p>
+              <p className="text-amber-200 mb-4">Get the latest jewelry trends & exclusive offers!</p>
               <div className="flex space-x-2">
                 <Input 
                   placeholder="Your email"
-                  className="bg-white/20 border-white/30 text-white placeholder-purple-200"
+                  className="bg-white/20 border-white/30 text-white placeholder-amber-200"
                 />
-                <Button className="bg-pink-500 hover:bg-pink-600">
+                <Button className="bg-amber-600 hover:bg-amber-700">
                   Subscribe
                 </Button>
               </div>
             </div>
           </div>
           
-          <div className="border-t border-purple-700 mt-8 pt-8 text-center text-purple-200">
-            <p>&copy; 2024 DressUp. Made with 💕 for fashion lovers everywhere.</p>
+          <div className="border-t border-amber-700 mt-8 pt-8 text-center text-amber-200">
+            <p>&copy; 2024 JewelCraft. Made with 💎 for jewelry lovers everywhere.</p>
           </div>
         </div>
       </footer>
