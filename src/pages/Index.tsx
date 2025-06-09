@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Heart, ShoppingCart, Star, Filter, TrendingUp, Sparkles, Crown, Users } from 'lucide-react';
+import { Search, Heart, ShoppingCart, Star, Filter, TrendingUp, Sparkles, Crown, Users, Menu, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 import HeroCarousel from '@/components/HeroCarousel';
 import JewelryCategories from '@/components/JewelryCategories';
 import InstaGlamSection from '@/components/InstaGlamSection';
@@ -13,6 +21,54 @@ import WhatsAppBot from '@/components/WhatsAppBot';
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
+
+  const beautyCategories = [
+    {
+      name: "BESTSELLER",
+      image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-pink-200 to-pink-300"
+    },
+    {
+      name: "LIPS",
+      image: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-red-200 to-red-300"
+    },
+    {
+      name: "FACE",
+      image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-orange-200 to-orange-300"
+    },
+    {
+      name: "EYE",
+      image: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-blue-200 to-blue-300"
+    },
+    {
+      name: "NEW LAUNCH",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-purple-200 to-purple-300"
+    },
+    {
+      name: "SKIN CARE",
+      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-green-200 to-green-300"
+    },
+    {
+      name: "GIFTS & KITS",
+      image: "https://images.unsplash.com/photo-1549062572-544a64fb0c56?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-pink-200 to-purple-300"
+    },
+    {
+      name: "SELECT",
+      image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-yellow-200 to-yellow-300"
+    },
+    {
+      name: "CRAZE",
+      image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=100&h=100&fit=crop",
+      bgColor: "bg-gradient-to-br from-indigo-200 to-indigo-300"
+    }
+  ];
 
   const categories = [
     { name: 'All', icon: '👗', color: 'from-purple-400 to-pink-400' },
@@ -93,14 +149,32 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
-      {/* Header */}
-      <header className="bg-white/80 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-purple-100">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+      {/* Main Header */}
+      <header className="bg-white shadow-lg sticky top-0 z-50 border-b border-purple-100">
+        <div className="container mx-auto px-4">
+          {/* Top Bar */}
+          <div className="flex items-center justify-between py-4">
             <div className="text-2xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
               DressUp ✨
             </div>
+            
+            {/* Search Bar */}
+            <div className="flex-1 max-w-md mx-8">
+              <div className="relative">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+                <Input
+                  placeholder="Search for your perfect dress..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="pl-10 pr-4 py-2 rounded-full border-purple-200 focus:border-purple-400 focus:ring-purple-400/20"
+                />
+              </div>
+            </div>
+
             <div className="flex items-center space-x-4">
+              <Button variant="ghost" size="sm" className="relative hover:bg-purple-100">
+                <User className="h-5 w-5 text-gray-600" />
+              </Button>
               <Button variant="ghost" size="sm" className="relative hover:bg-purple-100">
                 <Heart className="h-5 w-5 text-gray-600" />
                 <span className="absolute -top-1 -right-1 bg-pink-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
@@ -111,26 +185,128 @@ const Index = () => {
               </Button>
             </div>
           </div>
+
+          {/* Navigation Menu */}
+          <div className="border-t border-gray-100 py-2">
+            <NavigationMenu className="mx-auto">
+              <NavigationMenuList className="space-x-8">
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
+                    FACE
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="p-4 w-80">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <h4 className="font-semibold mb-2">Foundation</h4>
+                          <ul className="space-y-1 text-sm">
+                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Liquid Foundation</NavigationMenuLink></li>
+                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Powder Foundation</NavigationMenuLink></li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold mb-2">Concealer</h4>
+                          <ul className="space-y-1 text-sm">
+                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Liquid Concealer</NavigationMenuLink></li>
+                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Stick Concealer</NavigationMenuLink></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
+                    EYE
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="p-4 w-80">
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <h4 className="font-semibold mb-2">Eyeshadow</h4>
+                          <ul className="space-y-1 text-sm">
+                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Palettes</NavigationMenuLink></li>
+                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Singles</NavigationMenuLink></li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h4 className="font-semibold mb-2">Eyeliner</h4>
+                          <ul className="space-y-1 text-sm">
+                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Liquid Eyeliner</NavigationMenuLink></li>
+                            <li><NavigationMenuLink href="#" className="text-gray-600 hover:text-purple-600">Pencil Eyeliner</NavigationMenuLink></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
+                    LIPS
+                  </NavigationMenuTrigger>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
+                    NAIL
+                  </NavigationMenuTrigger>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
+                    BRUSHES & TOOLS
+                  </NavigationMenuTrigger>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
+                    NEW ARRIVALS
+                  </NavigationMenuTrigger>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
+                    BRIDAL BUNDLE
+                  </NavigationMenuTrigger>
+                </NavigationMenuItem>
+
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-medium text-gray-700 hover:text-purple-600">
+                    SKIN CARE
+                  </NavigationMenuTrigger>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+          </div>
+
+          {/* Beauty Categories Row */}
+          <div className="bg-black text-white py-4 -mx-4">
+            <div className="container mx-auto px-4">
+              <div className="flex items-center justify-center space-x-6 md:space-x-8 overflow-x-auto scrollbar-hide">
+                {beautyCategories.map((category, index) => (
+                  <div key={index} className="flex flex-col items-center space-y-2 min-w-[80px] cursor-pointer group">
+                    <div className={`w-16 h-16 md:w-20 md:h-20 rounded-full ${category.bgColor} p-1 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <img 
+                        src={category.image} 
+                        alt={category.name}
+                        className="w-full h-full object-cover rounded-full"
+                      />
+                    </div>
+                    <span className="text-xs font-medium text-center leading-tight">
+                      {category.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </header>
 
       {/* Hero Carousel */}
       <HeroCarousel />
-
-      {/* Search Section */}
-      <section className="py-8">
-        <div className="container mx-auto px-4 text-center">
-          <div className="relative max-w-md mx-auto">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-            <Input
-              placeholder="Search for your perfect dress..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 pr-4 py-3 rounded-full border-purple-200 focus:border-purple-400 focus:ring-purple-400/20"
-            />
-          </div>
-        </div>
-      </section>
 
       {/* Category Filter */}
       <section className="py-8">

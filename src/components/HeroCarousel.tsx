@@ -38,57 +38,8 @@ const HeroCarousel = () => {
     }
   ];
 
-  const beautyCategories = [
-    {
-      name: "BESTSELLER",
-      image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-pink-200 to-pink-300"
-    },
-    {
-      name: "LIPS",
-      image: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-red-200 to-red-300"
-    },
-    {
-      name: "FACE",
-      image: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-orange-200 to-orange-300"
-    },
-    {
-      name: "EYE",
-      image: "https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-blue-200 to-blue-300"
-    },
-    {
-      name: "NEW LAUNCH",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-purple-200 to-purple-300"
-    },
-    {
-      name: "SKIN CARE",
-      image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-green-200 to-green-300"
-    },
-    {
-      name: "GIFTS & KITS",
-      image: "https://images.unsplash.com/photo-1549062572-544a64fb0c56?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-pink-200 to-purple-300"
-    },
-    {
-      name: "SELECT",
-      image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-yellow-200 to-yellow-300"
-    },
-    {
-      name: "CRAZE",
-      image: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=100&h=100&fit=crop",
-      bgColor: "bg-gradient-to-br from-indigo-200 to-indigo-300"
-    }
-  ];
-
   return (
     <section className="relative overflow-hidden">
-      {/* Main Carousel */}
       <Carousel className="w-full">
         <CarouselContent>
           {slides.map((slide, index) => (
@@ -167,28 +118,6 @@ const HeroCarousel = () => {
         <CarouselPrevious className="left-4" />
         <CarouselNext className="right-4" />
       </Carousel>
-
-      {/* Beauty Categories Section */}
-      <div className="bg-black text-white py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center space-x-6 md:space-x-8 overflow-x-auto scrollbar-hide">
-            {beautyCategories.map((category, index) => (
-              <div key={index} className="flex flex-col items-center space-y-3 min-w-[100px] cursor-pointer group">
-                <div className={`w-20 h-20 md:w-24 md:h-24 rounded-full ${category.bgColor} p-1 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                  <img 
-                    src={category.image} 
-                    alt={category.name}
-                    className="w-full h-full object-cover rounded-full"
-                  />
-                </div>
-                <span className="text-xs md:text-sm font-medium text-center leading-tight">
-                  {category.name}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
     </section>
   );
 };
