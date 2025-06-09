@@ -4,6 +4,7 @@ import { Search, Heart, ShoppingCart, Star, Filter, TrendingUp, Sparkles, Crown,
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
+import HeroCarousel from '@/components/HeroCarousel';
 import JewelryCategories from '@/components/JewelryCategories';
 import InstaGlamSection from '@/components/InstaGlamSection';
 import LiveChatbot from '@/components/LiveChatbot';
@@ -113,27 +114,20 @@ const Index = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative py-16 overflow-hidden">
+      {/* Hero Carousel */}
+      <HeroCarousel />
+
+      {/* Search Section */}
+      <section className="py-8">
         <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 bg-clip-text text-transparent">
-              Your Dream Dress Awaits ✨
-            </h1>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Discover stunning traditional & western dresses that make you feel confident, beautiful, and absolutely radiant 💃
-            </p>
-            
-            {/* Search Bar */}
-            <div className="relative max-w-md mx-auto mb-12">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-              <Input
-                placeholder="Search for your perfect dress..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 pr-4 py-3 rounded-full border-purple-200 focus:border-purple-400 focus:ring-purple-400/20"
-              />
-            </div>
+          <div className="relative max-w-md mx-auto">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+            <Input
+              placeholder="Search for your perfect dress..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-10 pr-4 py-3 rounded-full border-purple-200 focus:border-purple-400 focus:ring-purple-400/20"
+            />
           </div>
         </div>
       </section>

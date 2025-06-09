@@ -9,28 +9,28 @@ const InstaGlamSection = () => {
     {
       name: "LAKME",
       category: "Beauty & Makeup",
-      image: "💄",
+      image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=300&fit=crop",
       gradient: "from-pink-500 to-red-500",
       products: ["Lipstick", "Foundation", "Mascara", "Blush"]
     },
     {
       name: "FOSSIL",
       category: "Watches & Accessories",
-      image: "⌚",
+      image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop",
       gradient: "from-gray-500 to-black",
       products: ["Smartwatch", "Leather Watch", "Steel Band", "Classic"]
     },
     {
       name: "NYKAA",
       category: "Skincare & Beauty",
-      image: "✨",
+      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop",
       gradient: "from-purple-500 to-pink-500",
       products: ["Face Serum", "Moisturizer", "Sunscreen", "Face Mask"]
     },
     {
       name: "TANISHQ",
       category: "Gold & Diamond Jewelry",
-      image: "💎",
+      image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400&h=300&fit=crop",
       gradient: "from-yellow-500 to-orange-500",
       products: ["Necklace", "Earrings", "Rings", "Bangles"]
     }
@@ -54,11 +54,16 @@ const InstaGlamSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {brands.map((brand, index) => (
             <Card key={index} className="group overflow-hidden border-0 shadow-lg bg-white rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-              <div className={`h-32 bg-gradient-to-br ${brand.gradient} relative overflow-hidden`}>
-                <div className="absolute inset-0 bg-black/20" />
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={brand.image} 
+                  alt={brand.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-br ${brand.gradient} opacity-80`} />
                 <div className="absolute bottom-4 left-4 text-white">
-                  <div className="text-3xl mb-2">{brand.image}</div>
                   <h3 className="font-bold text-lg">{brand.name}</h3>
+                  <p className="text-sm opacity-90">{brand.category}</p>
                 </div>
                 <div className="absolute top-3 right-3">
                   <div className="bg-white/20 backdrop-blur-sm rounded-full p-2">
@@ -68,7 +73,6 @@ const InstaGlamSection = () => {
               </div>
               
               <CardContent className="p-4">
-                <p className="text-sm text-gray-600 mb-3">{brand.category}</p>
                 <div className="space-y-2 mb-4">
                   {brand.products.map((product, productIndex) => (
                     <div key={productIndex} className="flex items-center justify-between text-sm">
