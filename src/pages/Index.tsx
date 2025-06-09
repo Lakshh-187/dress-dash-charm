@@ -1,10 +1,13 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Search, Heart, ShoppingCart, Star, Filter, TrendingUp, Sparkles, Crown, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
+import JewelryCategories from '@/components/JewelryCategories';
+import InstaGlamSection from '@/components/InstaGlamSection';
+import LiveChatbot from '@/components/LiveChatbot';
+import WhatsAppBot from '@/components/WhatsAppBot';
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -241,6 +244,12 @@ const Index = () => {
         </div>
       </section>
 
+      {/* New Jewelry Categories Section */}
+      <JewelryCategories />
+
+      {/* New Insta Glam Section */}
+      <InstaGlamSection />
+
       {/* Collections */}
       <section className="py-12 bg-white/50">
         <div className="container mx-auto px-4">
@@ -375,6 +384,12 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      {/* Live Chatbot */}
+      <LiveChatbot />
+
+      {/* WhatsApp Bot */}
+      <WhatsAppBot />
     </div>
   );
 };
